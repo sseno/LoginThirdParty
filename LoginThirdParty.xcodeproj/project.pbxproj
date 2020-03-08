@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		69AA3CC924127BB000ED275E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AA3CC824127BB000ED275E /* AppDelegate.swift */; };
 		69AA3CCB24127BB000ED275E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AA3CCA24127BB000ED275E /* SceneDelegate.swift */; };
-		69AA3CCD24127BB000ED275E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AA3CCC24127BB000ED275E /* ViewController.swift */; };
+		69AA3CCD24127BB000ED275E /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AA3CCC24127BB000ED275E /* LoginVC.swift */; };
 		69AA3CD224127BB900ED275E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69AA3CD124127BB900ED275E /* Assets.xcassets */; };
 		69AA3CD524127BB900ED275E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69AA3CD324127BB900ED275E /* LaunchScreen.storyboard */; };
 		69F3A11B24136D9D00108E10 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F3A11A24136D9D00108E10 /* HomeVC.swift */; };
+		69F3A11D2413FF6A00108E10 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69F3A11C2413FF6A00108E10 /* GoogleService-Info.plist */; };
+		69F3A11F24150AC100108E10 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69F3A11E24150AC000108E10 /* LoginVC.xib */; };
 		B24780A131D4EEFBEC823860 /* Pods_LoginThirdParty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A153C541F9C49B05511C05B /* Pods_LoginThirdParty.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,11 +22,13 @@
 		69AA3CC524127BB000ED275E /* LoginThirdParty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginThirdParty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69AA3CC824127BB000ED275E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69AA3CCA24127BB000ED275E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		69AA3CCC24127BB000ED275E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		69AA3CCC24127BB000ED275E /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		69AA3CD124127BB900ED275E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69AA3CD424127BB900ED275E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69AA3CD624127BB900ED275E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69F3A11A24136D9D00108E10 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		69F3A11C2413FF6A00108E10 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		69F3A11E24150AC000108E10 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		6A153C541F9C49B05511C05B /* Pods_LoginThirdParty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginThirdParty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B76465F3EAD547FF9B5908D8 /* Pods-LoginThirdParty.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginThirdParty.release.xcconfig"; path = "Target Support Files/Pods-LoginThirdParty/Pods-LoginThirdParty.release.xcconfig"; sourceTree = "<group>"; };
 		D70528116071036C44F2ACA1 /* Pods-LoginThirdParty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginThirdParty.debug.xcconfig"; path = "Target Support Files/Pods-LoginThirdParty/Pods-LoginThirdParty.debug.xcconfig"; sourceTree = "<group>"; };
@@ -78,6 +82,7 @@
 				69AA3CD124127BB900ED275E /* Assets.xcassets */,
 				69AA3CD324127BB900ED275E /* LaunchScreen.storyboard */,
 				69AA3CD624127BB900ED275E /* Info.plist */,
+				69F3A11C2413FF6A00108E10 /* GoogleService-Info.plist */,
 			);
 			path = LoginThirdParty;
 			sourceTree = "<group>";
@@ -85,8 +90,9 @@
 		69F3A11924136D8C00108E10 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				69AA3CCC24127BB000ED275E /* ViewController.swift */,
+				69AA3CCC24127BB000ED275E /* LoginVC.swift */,
 				69F3A11A24136D9D00108E10 /* HomeVC.swift */,
+				69F3A11E24150AC000108E10 /* LoginVC.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -161,6 +167,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				69AA3CD524127BB900ED275E /* LaunchScreen.storyboard in Resources */,
+				69F3A11D2413FF6A00108E10 /* GoogleService-Info.plist in Resources */,
+				69F3A11F24150AC100108E10 /* LoginVC.xib in Resources */,
 				69AA3CD224127BB900ED275E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -231,7 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69AA3CCD24127BB000ED275E /* ViewController.swift in Sources */,
+				69AA3CCD24127BB000ED275E /* LoginVC.swift in Sources */,
 				69F3A11B24136D9D00108E10 /* HomeVC.swift in Sources */,
 				69AA3CC924127BB000ED275E /* AppDelegate.swift in Sources */,
 				69AA3CCB24127BB000ED275E /* SceneDelegate.swift in Sources */,

@@ -8,5 +8,9 @@ target 'LoginThirdParty' do
   # Pods for LoginThirdParty
 
   pod 'GoogleSignIn'
+  pod 'Firebase/Auth'
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
+  pod 'FacebookShare'
 
 end

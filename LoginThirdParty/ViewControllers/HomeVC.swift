@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleSignIn
+import FirebaseAuth
 
 class HomeVC: UIViewController {
     
@@ -27,9 +28,13 @@ class HomeVC: UIViewController {
     }
     
     @objc func didTapSignOut(_ sender: UIButton) {
-        GIDSignIn.sharedInstance()?.signOut()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            self.navigationController?.popViewController(animated: false)
+        do {
+            try Auth.auth().signOut()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                self.navigationController?.popViewController(animated: false)
+            }
+        } catch let signOutError as NSError {
+            print("Error signing out: %@", signOutError)
         }
     }
 }
