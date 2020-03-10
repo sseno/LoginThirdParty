@@ -39,35 +39,35 @@ class LoginVC: UIViewController {
         fbLoginManager.logIn(permissions: ["public_profile", "email"], from: self) { (result, error) in
             if let error = error {
                 print(error.localizedDescription)
-                return
-            }
-            
-            guard let accessToken = AccessToken.current else {
-                print("Failed to get access token")
-                return
-            }
-            
-            let credential = FacebookAuthProvider.credential(withAccessToken: accessToken.tokenString)
-            
-            Auth.auth().signIn(with: credential) { (authDataResult, error) in
-                if let error = error {
-                    print("Login error: \(error.localizedDescription)")
-                    let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
-                    let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                    alertController.addAction(okayAction)
-                    self.present(alertController, animated: true, completion: nil)
+            } else if result?.isCancelled ?? true { print("user is cancelled")
+            } else {
+                guard let accessToken = AccessToken.current else {
+                    print("Failed to get access token")
                     return
                 }
                 
-                let profile = authDataResult?.additionalUserInfo?.profile
-                let email = profile?["email"] as! String
-                let firstName = profile?["first_name"] as! String
-                let lastName = profile?["last_name"] as! String
-                let idFB = profile?["id"] as! String
+                let credential = FacebookAuthProvider.credential(withAccessToken: accessToken.tokenString)
                 
-                print(email + " ", firstName + " ", lastName + " ", idFB)
-                
-                self.navigationController?.pushViewController(HomeVC(), animated: true)
+                Auth.auth().signIn(with: credential) { (authDataResult, error) in
+                    if let error = error {
+                        print("Login error: \(error.localizedDescription)")
+                        let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
+                        let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                        alertController.addAction(okayAction)
+                        self.present(alertController, animated: true, completion: nil)
+                        return
+                    }
+                    
+                    let profile = authDataResult?.additionalUserInfo?.profile
+                    let email = profile?["email"] as! String
+                    let firstName = profile?["first_name"] as! String
+                    let lastName = profile?["last_name"] as! String
+                    let idFB = profile?["id"] as! String
+                    
+                    print(email + " ", firstName + " ", lastName + " ", idFB)
+                    
+                    self.navigationController?.pushViewController(HomeVC(), animated: true)
+                }
             }
         }
     }

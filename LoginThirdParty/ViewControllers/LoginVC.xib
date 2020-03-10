@@ -22,6 +22,24 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oDO-Hd-FHB">
                     <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                     <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RdA-Dw-Fvc">
+                            <rect key="frame" x="20" y="20" width="335" height="694"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1XG-F8-lDp">
+                                    <rect key="frame" x="0.0" y="0.0" width="335" height="48"/>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="48" id="hWL-rZ-xI9"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                </textField>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TCk-xw-dtn">
+                                    <rect key="frame" x="0.0" y="48" width="335" height="646"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </view>
+                            </subviews>
+                        </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ytM-WU-QgS">
                             <rect key="frame" x="20" y="20" width="335" height="694"/>
                             <subviews>
@@ -110,8 +128,12 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="RdA-Dw-Fvc" secondAttribute="trailing" constant="20" symbolic="YES" id="7C2-7P-mmy"/>
                         <constraint firstAttribute="bottom" secondItem="ytM-WU-QgS" secondAttribute="bottom" constant="20" symbolic="YES" id="9CK-jr-z8a"/>
+                        <constraint firstItem="RdA-Dw-Fvc" firstAttribute="top" secondItem="oDO-Hd-FHB" secondAttribute="top" constant="20" symbolic="YES" id="BtW-bS-BbW"/>
                         <constraint firstItem="ytM-WU-QgS" firstAttribute="top" secondItem="oDO-Hd-FHB" secondAttribute="top" constant="20" symbolic="YES" id="OOZ-eS-WMO"/>
+                        <constraint firstAttribute="bottom" secondItem="RdA-Dw-Fvc" secondAttribute="bottom" constant="20" symbolic="YES" id="Q5M-z0-sF8"/>
+                        <constraint firstItem="RdA-Dw-Fvc" firstAttribute="leading" secondItem="oDO-Hd-FHB" secondAttribute="leading" constant="20" symbolic="YES" id="bgV-u1-hzv"/>
                         <constraint firstItem="ytM-WU-QgS" firstAttribute="leading" secondItem="oDO-Hd-FHB" secondAttribute="leading" constant="20" symbolic="YES" id="dqh-Mq-7Rb"/>
                         <constraint firstAttribute="trailing" secondItem="ytM-WU-QgS" secondAttribute="trailing" constant="20" symbolic="YES" id="zWa-DI-0B6"/>
                     </constraints>

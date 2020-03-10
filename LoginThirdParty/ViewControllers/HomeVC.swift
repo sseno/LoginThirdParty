@@ -31,7 +31,7 @@ class HomeVC: UIViewController {
         do {
             try Auth.auth().signOut()
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                self.navigationController?.popViewController(animated: false)
+                self.setRootViewController(rootViewController: LoginVC(), animated: true, completion: nil)
             }
         } catch let signOutError as NSError {
             print("Error signing out: %@", signOutError)

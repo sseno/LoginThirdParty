@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		690C69D12415EE0C0093601A /* PortalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690C69D02415EE0C0093601A /* PortalVC.swift */; };
+		690C69D62415FEBF0093601A /* UIViewController+Redirect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690C69D52415FEBF0093601A /* UIViewController+Redirect.swift */; };
 		69AA3CC924127BB000ED275E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AA3CC824127BB000ED275E /* AppDelegate.swift */; };
 		69AA3CCB24127BB000ED275E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AA3CCA24127BB000ED275E /* SceneDelegate.swift */; };
 		69AA3CCD24127BB000ED275E /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AA3CCC24127BB000ED275E /* LoginVC.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		690C69D02415EE0C0093601A /* PortalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortalVC.swift; sourceTree = "<group>"; };
+		690C69D52415FEBF0093601A /* UIViewController+Redirect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Redirect.swift"; sourceTree = "<group>"; };
 		69AA3CC524127BB000ED275E /* LoginThirdParty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginThirdParty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69AA3CC824127BB000ED275E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69AA3CCA24127BB000ED275E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +59,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		690C69D22415FE850093601A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				690C69D52415FEBF0093601A /* UIViewController+Redirect.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		69AA3CBC24127BB000ED275E = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +88,7 @@
 		69AA3CC724127BB000ED275E /* LoginThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				690C69D22415FE850093601A /* Extensions */,
 				69F3A11924136D8C00108E10 /* ViewControllers */,
 				69AA3CC824127BB000ED275E /* AppDelegate.swift */,
 				69AA3CCA24127BB000ED275E /* SceneDelegate.swift */,
@@ -93,6 +106,7 @@
 				69AA3CCC24127BB000ED275E /* LoginVC.swift */,
 				69F3A11A24136D9D00108E10 /* HomeVC.swift */,
 				69F3A11E24150AC000108E10 /* LoginVC.xib */,
+				690C69D02415EE0C0093601A /* PortalVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -239,7 +253,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				690C69D62415FEBF0093601A /* UIViewController+Redirect.swift in Sources */,
 				69AA3CCD24127BB000ED275E /* LoginVC.swift in Sources */,
+				690C69D12415EE0C0093601A /* PortalVC.swift in Sources */,
 				69F3A11B24136D9D00108E10 /* HomeVC.swift in Sources */,
 				69AA3CC924127BB000ED275E /* AppDelegate.swift in Sources */,
 				69AA3CCB24127BB000ED275E /* SceneDelegate.swift in Sources */,

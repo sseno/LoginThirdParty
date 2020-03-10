@@ -19,15 +19,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        // Facebook sign in
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         
+        // Use Firebase library to configure APIs
         FirebaseApp.configure()
+        
+        // Initialize sign-in google
         GIDSignIn.sharedInstance()?.clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance()?.delegate = self
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        let nav = UINavigationController(rootViewController:  LoginVC())
-        window!.rootViewController = nav
+        window!.rootViewController = PortalVC()
         window!.makeKeyAndVisible()
         
         return true
